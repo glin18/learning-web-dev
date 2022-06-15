@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Tennis Scorekeeper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section class="container">
+        <img src="/images/tabletennis.png" alt="table tennis image">
+        <h1>Table Tennis Score Keeper</h1>
+        <h2><span class="playerOneDisplay">0</span> to <span class="playerTwoDisplay">0</span></h2>
+        <h3></h3>
+        <div>
+            <button>Player 1 Scores</button>
+            <button class="playerTwoButton">Player 2 Scores</button>
+        </div>
+        <form action="">
+            <label for="endScore">Select End Score: </label>
+            <select name="endScore" id="endScore">
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="11">11</option>
+                <option value="21">21</option>
+            </select>
+            <button type="button" class="endScoreButton">Enter</button>
+        </form>
+        <button class="restart">Restart</button>
+    </section>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
