@@ -3,6 +3,7 @@ const path = require("path");
 const mongoose = require('mongoose');
 const Product = require("./models/product");
 const methodOverride = require('method-override');
+const Farm = require("./models/farm.js");
 
 main()
     .then(() => {
@@ -23,6 +24,27 @@ app.use(methodOverride('_method'));
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000");
 })
+
+// Farm routes
+app.get('/farms/new', (req, res) => {
+    res.render("farms/new");
+})
+
+app.get('/farms', async (req, res) => {
+    const farms = await Farm.find({});
+    res.render('farms/index', { farms });
+})
+
+app.post('/farms', async (req, res) => {
+    console.log(req.body);
+    const newFarm = new Farm(req.body);
+    const response = await newFarm.save();
+    console.log(response);
+    res.redirect('/farms');
+})
+
+// Product routes
+
 
 app.get('/products', async (req, res) => {
     const products = await Product.find({});
