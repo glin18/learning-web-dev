@@ -26,8 +26,39 @@ app.listen(3000, () => {
 })
 
 // Farm routes
+app.get('/farms/:id/products/new', (req, res) => {
+    const { id } = req.params;
+    res.render('products/new', { id });
+})
+
+app.post('/farms/:id/products', async (req, res) => {
+    const { id } = req.params;
+    const product = new Product(req.body);
+    const farm = await Farm.findById(id);
+    product.farm.push(farm);
+    farm.products.push(product);
+    const response = await product.save();
+    console.log(response);
+    const response2 = await farm.save();
+    console.log(response2);
+    res.redirect('/farms/:id/products');
+})
+
+app.get('/farms/:id/products', async (req, res) => {
+    const { id } = req.params
+    const farm = await Farm.findById(id);
+    const products = await Product.find({ farm: farm });
+    res.render('products/farmProducts', { farm, products });
+})
+
 app.get('/farms/new', (req, res) => {
     res.render("farms/new");
+})
+
+app.get('/farms/:id', async (req, res) => {
+    const { id } = req.params;
+    const farm = await Farm.findById(id);
+    res.render('farms/show', { farm });
 })
 
 app.get('/farms', async (req, res) => {
