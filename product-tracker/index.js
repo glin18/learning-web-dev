@@ -41,7 +41,13 @@ app.post('/farms/:id/products', async (req, res) => {
     console.log(response);
     const response2 = await farm.save();
     console.log(response2);
-    res.redirect('/farms/:id/products');
+    res.redirect(`/farms/${id}/products`);
+})
+
+app.delete('/farms/:id', async (req, res) => {
+    const { id } = req.params;
+    await Farm.findByIdAndDelete(id);
+    res.redirect('/farms');
 })
 
 app.get('/farms/:id/products', async (req, res) => {

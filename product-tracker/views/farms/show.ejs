@@ -20,6 +20,9 @@
     <a href="/farms">Return to All Farms</a>
     <a href="/farms/<%=farm._id%>/products/new">Add Products</a>
     <a href="/farms/<%=farm._id%>/products">View Products</a>
+    <form action="http://localhost:3000/farms/<%=farm._id%>?_method=DELETE" method="post">
+        <button>Delete</button>
+    </form>
 </body>
 
 </html>
