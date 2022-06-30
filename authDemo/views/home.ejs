@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include("../partials/navbar") %>
+        <% if(successful && successful.length){ %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%=successful%>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <% } %>
+                <% if(unsuccessful && unsuccessful.length){ %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <%=unsuccessful%>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <% } %>
+                        <div class="container mt-3">
+                            <h1>Panda Home</h1>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://i.pinimg.com/736x/43/d9/24/43d9243b3054e377c1869bea35d0b879.jpg"
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dabbing Panda</h5>
+                                        <p class="card-text">Dabbing Panda likes to dab. Dabbing Panda is a pro dancer.
+                                            Dabbing
+                                            Panda's
+                                            favorite dance move is the dab. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://media.istockphoto.com/vectors/cute-panda-paws-up-over-wall-panda-face-cartoon-icon-vector-vector-id1162669873?k=20&m=1162669873&s=612x612&w=0&h=Vug2BRV7LEdrUNLp1rwSlpUNa0Vv7qh-l4hI1eDk2vw="
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hiding Panda</h5>
+                                        <p class="card-text">Shy panda is hiding behind a wall. Shy panda is waving at
+                                            you. Shy
+                                            Panda is
+                                            very shy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://media.istockphoto.com/vectors/cute-panda-character-vector-design-vector-id1195743934?k=20&m=1195743934&s=612x612&w=0&h=oo95OC05gi1Rr48Ft3gqojI2yZHfuvKoD2zfbzxwqOg="
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Waving Panda</h5>
+                                        <p class="card-text">Waving Panda is very cheerful and polite. Waving panda
+                                            waves at
+                                            everyone.
+                                            Waving panda has red cheeks</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://media.istockphoto.com/vectors/lazy-panda-cartoon-vector-illustration-vector-id985265820?k=20&m=985265820&s=612x612&w=0&h=ieVb1rEJ2grT9qzMNyx2g-Ml9jzM0V7AZE5cK4-Ut8Y="
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lazy Panda</h5>
+                                        <p class="card-text">Lazy Panda doesn't do anything all day. Lazy panda just
+                                            lies there
+                                            on his
+                                            stomach. Lazy panda doesn't like exercise</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://media.istockphoto.com/vectors/giant-panda-illustration-vector-id1057675402?k=20&m=1057675402&s=612x612&w=0&h=JFmzSrAjjZvjlnpB0oEfWweEfoOfhycqMDABlR_BXoQ="
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">What Panda</h5>
+                                        <p class="card-text">What Panda hates everyone. What panda stares at you to make
+                                            you go
+                                            away.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100">
+                                    <img src="https://media.istockphoto.com/vectors/cute-panda-eating-noodles-vector-id938218358?k=20&m=938218358&s=612x612&w=0&h=7RGsoDWmdvedWQQH2sEOwPmcXFpKNTSFsoxSD3EWonk="
+                                        class="card-img-top" alt="Can't find Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ramen Panda</h5>
+                                        <p class="card-text">Ramen Panda loves food. Ramen Panda is a professional chef.
+                                            Ramen
+                                            Panda's
+                                            favorite food is ramen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <%- include('../partials/scripts') %>
+</body>
+
+</html>
